@@ -16,7 +16,7 @@ AnalogSensor::AnalogSensor(unsigned int samples)
 AnalogSensor::~AnalogSensor() {
 }
 
-explicit int AnalogSensor::Read() {
+int AnalogSensor::Read() {
     auto readings = std::make_shared<std::vector<int>> (mSamples, 10);
 
     double result = std::accumulate(readings->begin(), \
